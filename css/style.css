@@ -14,6 +14,7 @@ body {
 .imageBanner {
   height: 100%;
   width: 100%;
+  z-index: -1;
 }
 .container {
   display: flex;
@@ -21,7 +22,6 @@ body {
   text-align: center;
   justify-content: center;
   height: 60px;
-  z-index: 1;
 }
 .container a {
   /* display: flex; */
@@ -64,8 +64,10 @@ body {
   width: 140px;
   border-radius: 50%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -35px;
+  left: 50px;
+  z-index: 1;
+  border: 5px solid #ffffff;
 }
 .mail-user {
   display: flex;
@@ -148,6 +150,7 @@ section > .container2 {
   /* width: 30%; */
   gap: 30px;
   justify-self: center;
+  z-index: -1;
 }
 
 .experiment,
@@ -296,13 +299,14 @@ section > .container5 {
 }
 #nav-bar {
   text-align: center;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: #ffffff;
 }
 #banner {
   position: relative;
   text-align: center;
   color: white;
+  margin-bottom: -4px;
 }
 .textBanner {
   position: absolute;
