@@ -6,8 +6,10 @@ body {
   margin: 50px;
   font-family: "Open Sans", sans-serif;
 }
+
 .bg-grey {
   background: #f7f7f7;
+  z-index: -1;
 }
 .imageBanner {
   height: 100%;
@@ -19,6 +21,7 @@ body {
   text-align: center;
   justify-content: center;
   height: 60px;
+  z-index: 1;
 }
 .container a {
   /* display: flex; */
@@ -54,6 +57,15 @@ body {
   border-top: 0px;
   border-left: 0px;
   display: block;
+  position: relative;
+}
+.name-user > img {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .mail-user {
   display: flex;
