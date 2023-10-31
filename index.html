@@ -4,15 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/font.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <title>Assignment 02</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/desktop.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <title>Assignment 03</title>
   </head>
   <body>
     <div id="banner">
@@ -76,12 +91,23 @@
               Nội
             </li>
             <li class="website"><span>Website</span> : https://abc.tech</li>
+            <li class="logo">
+              <td><i class="icon-twitter"></i></td>
+              <td><i class="icon-facebook"></i></td>
+              <td><i class="icon-gplus"></i></td>
+              <td><i class="icon-linkedin"></i></td>
+            </li>
           </ul>
-          <div class="logo">
-            <td><i class="icon-twitter"></i></td>
-            <td><i class="icon-facebook"></i></td>
-            <td><i class="icon-gplus"></i></td>
-            <td><i class="icon-linkedin"></i></td>
+          <div class="submit-email">
+            <input type="email" id="email" />
+            <p id="error-email"></p>
+            <button
+              class="btn btn-primary submitEmail"
+              type="button"
+              onclick="handleSubmit()"
+            >
+              Submit
+            </button>
           </div>
         </div>
       </div>
@@ -89,14 +115,18 @@
 
     <section id="job-info">
       <div class="container2">
-        <div class="experiment">
+        <div
+          class="experiment parent"
+          onmouseover="handlerOnMouseOver(this)"
+          onmouseout="handlerOnMouseOut(this)"
+        >
           <div class="experiment-title">
-            <h1>Kinh nghiệm</h1>
+            <h2>Kinh nghiệm</h2>
             <span
               ><td><i class="ic-toolbox"></i></td
             ></span>
           </div>
-          <ul class="exp-content">
+          <ul class="exp-content section-content">
             <li>
               <div>
                 <p class="fontWeightBold">Full Stack Developer-Công ty Y</p>
@@ -118,7 +148,7 @@
               </div>
             </li>
           </ul>
-          <ul class="exp-content">
+          <ul class="exp-content section-content">
             <li>
               <div>
                 <p class="fontWeightBold">Web Designer-Công ty X</p>
@@ -128,16 +158,35 @@
               </div>
             </li>
           </ul>
+          <div>
+            <button
+              type="button"
+              class="view-more btn btn-secondary control-view"
+              onclick="handleViewMore(this)"
+            >
+              View more
+            </button>
+            <button
+              type="button"
+              class="less btn btn-secondary"
+              onclick="handleViewLes(this)"
+            >
+              Less
+            </button>
+          </div>
         </div>
-
-        <div class="experiment">
+        <div
+          class="education parent"
+          onmouseover="handlerOnMouseOver(this)"
+          onmouseout="handlerOnMouseOut(this)"
+        >
           <div class="education-title">
-            <h1>Học vấn</h1>
+            <h2>Học vấn</h2>
             <span
               ><td><i class="ic-pencil"></i></td
             ></span>
           </div>
-          <ul class="exp-content">
+          <ul class="exp-content section-content">
             <li>
               <div>
                 <p class="fontWeightBold">FUnix</p>
@@ -147,7 +196,7 @@
               </div>
             </li>
           </ul>
-          <ul class="exp-content">
+          <ul class="exp-content section-content">
             <li>
               <div>
                 <p class="fontWeightBold">Cử nhân-Đại học FPT</p>
@@ -157,15 +206,35 @@
               </div>
             </li>
           </ul>
+          <div>
+            <button
+              type="button"
+              class="view-more btn btn-secondary control-view"
+              onclick="handleViewMore(this)"
+            >
+              View more
+            </button>
+            <button
+              type="button"
+              class="less btn btn-secondary"
+              onclick="handleViewLes(this)"
+            >
+              Less
+            </button>
+          </div>
         </div>
-        <div class="action">
+        <div
+          class="action parent"
+          onmouseover="handlerOnMouseOver(this)"
+          onmouseout="handlerOnMouseOut(this)"
+        >
           <div class="action-title">
-            <h1>Hoạt động</h1>
+            <h2>Hoạt động</h2>
             <span
               ><td><i class="ic-toolbox"></i></td
             ></span>
           </div>
-          <ul class="exp-content">
+          <ul class="exp-content section-content">
             <li>
               <div>
                 <p class="fontWeightBold">FPT Edu Hackathon 2019</p>
@@ -175,7 +244,8 @@
               </div>
             </li>
           </ul>
-          <ul class="exp-content">
+
+          <ul class="exp-content section-content">
             <li>
               <div>
                 <p class="fontWeightBold">Câu lạc bộ Z</p>
@@ -184,16 +254,36 @@
               </div>
             </li>
           </ul>
+          <div>
+            <button
+              type="button"
+              class="view-more btn btn-secondary control-view"
+              onclick="handleViewMore(this)"
+            >
+              View more
+            </button>
+            <button
+              type="button"
+              class="less btn btn-secondary"
+              onclick="handleViewLes(this)"
+            >
+              Less
+            </button>
+          </div>
         </div>
-        <div class="hobby">
+        <div
+          class="hobby parent"
+          onmouseover="handlerOnMouseOver(this)"
+          onmouseout="handlerOnMouseOut(this)"
+        >
           <div class="hobby-title">
-            <h1>Sở thích</h1>
+            <h2>Sở thích</h2>
             <span
               ><td><i class="ic-telescope"></i></td
             ></span>
           </div>
           <!-- <div class="exp-content"> -->
-          <div class="hobby-content">
+          <div class="hobby-content section-content">
             <div class="music">
               <span class="round">
                 <i class="ic-megaphone"></i>
@@ -213,15 +303,35 @@
               <p>Nấu ăn</p>
             </div>
           </div>
+          <div>
+            <button
+              type="button"
+              class="view-more btn btn-secondary control-view"
+              onclick="handleViewMore(this)"
+            >
+              View more
+            </button>
+            <button
+              type="button"
+              class="less btn btn-secondary"
+              onclick="handleViewLes(this)"
+            >
+              Less
+            </button>
+          </div>
         </div>
-        <div class="language">
+        <div
+          class="language parent"
+          onmouseover="handlerOnMouseOver(this)"
+          onmouseout="handlerOnMouseOut(this)"
+        >
           <div class="language-title">
-            <h1>Ngôn ngữ</h1>
+            <h2>Ngôn ngữ</h2>
             <span
               ><td><i class="ic-mic"></i></td
             ></span>
           </div>
-          <div class="language-content">
+          <div class="language-content section-content">
             <div class="level">
               <p>Tiếng Anh-Ielts 7.0</p>
               <div class="rect">
@@ -239,15 +349,35 @@
               </div>
             </div>
           </div>
+          <div>
+            <button
+              type="button"
+              class="view-more btn btn-secondary control-view"
+              onclick="handleViewMore(this)"
+            >
+              View more
+            </button>
+            <button
+              type="button"
+              class="less btn btn-secondary"
+              onclick="handleViewLes(this)"
+            >
+              Less
+            </button>
+          </div>
         </div>
-        <div class="skill">
+        <div
+          class="skill parent"
+          onmouseover="handlerOnMouseOver(this)"
+          onmouseout="handlerOnMouseOut(this)"
+        >
           <div class="skill-title">
-            <h1>Kỹ năng</h1>
+            <h2>Kỹ năng</h2>
             <span>
               <td><i class="ic-tools-2"></i></td
             ></span>
           </div>
-          <div class="skill-content">
+          <div class="skill-content section-content">
             <div class="level">
               <p>HTML/CSS: Fundamental</p>
               <div class="rect">
@@ -281,6 +411,22 @@
               </div>
             </div>
           </div>
+          <div>
+            <button
+              type="button"
+              class="view-more btn btn-secondary control-view"
+              onclick="handleViewMore(this)"
+            >
+              View more
+            </button>
+            <button
+              type="button"
+              class="less btn btn-secondary"
+              onclick="handleViewLes(this)"
+            >
+              Less
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -306,8 +452,8 @@
             </div>
           </div>
           <hr class="horizontalHr" />
-          <div></div>
-          <div></div>
+          <div class="blank"></div>
+          <div class="blank"></div>
           <div id="cer3" class="certificate-items">
             <img src="images\Cert_WEB.png" alt="" />
             <div class="certificate-details">
@@ -326,7 +472,9 @@
         <div class="project-content">
           <div class="project-items">
             <img class="img-project" src="images\project_1.png" alt="" />
-            <div class="project-title">CV Cá Nhân</div>
+            <div class="project-title">
+              <a class="fw-bold" href="digital-cv.html">CV Cá Nhân</a>
+            </div>
             <div class="project-time">
               <p class="time-details">2021</p>
               <div class="unit">
@@ -358,7 +506,11 @@
           </div>
           <div class="project-items">
             <img class="img-project" src="images\project_2.png" alt="" />
-            <div class="project-title">Trang Web quản lý thú cưng</div>
+            <div class="project-title">
+              <a class="fw-bold" href="digital-pet.html"
+                >Trang Web quản lý thú cưng</a
+              >
+            </div>
             <div class="project-time">
               <p class="time-details">2021</p>
               <div class="unit">
@@ -391,7 +543,11 @@
           </div>
           <div class="project-items">
             <img class="img-project" src="images\project_3.png" alt="" />
-            <div class="project-title">Trang Web xem tin tức.</div>
+            <div class="project-title">
+              <a class="fw-bold" href="digital-web.html"
+                >Trang Web xem tin tức.</a
+              >
+            </div>
             <div class="project-time">
               <p class="time-details">2021</p>
               <div class="unit">
@@ -406,8 +562,8 @@
             <div class="project-description">
               <p class="des">Mô tả</p>
               <p class="des-detail">
-                Trang web xem tin tức từ nhiều nguồn khác nhau,người dùng có thể
-                tìm kiếm các tin tức đựa theo từ khóa.
+                Trang web xem tin tức từ nhiều nguồn khác nhau, người dùng có
+                thể tìm kiếm các tin tức đựa theo từ khóa.
               </p>
             </div>
             <div class="project-feature">
@@ -427,7 +583,7 @@
 
     <section id="footer" class="bg-grey">
       <div class="container5">
-        <div></div>
+        <div class="blank"></div>
         <div class="fb">
           <i class="icon-facebook-circled"></i>
           <a href="https://www.facebook.com/hung.phammanh.505/">Facebook</a>
@@ -445,5 +601,12 @@
         </div>
       </div>
     </section>
+    <!-- bt for js  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

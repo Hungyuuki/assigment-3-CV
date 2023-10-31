@@ -10,6 +10,8 @@ body {
 p,
 li {
   font-size: small;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 ul {
   margin: 5px;
@@ -51,6 +53,7 @@ a {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-shadow: 0.1em 0.1em #222;
 }
 
 /* Thanh navbar */
@@ -142,6 +145,10 @@ section > .container1 {
   grid-template-columns: 1fr 1fr;
 }
 /* Mục tiêu nghề nghiệp */
+/* Ẩn thông tin user đến khi submit */
+#personal-info .info {
+  display: none;
+}
 #target {
   padding: 50px 40px;
   background-color: #f7f7f7;
@@ -157,7 +164,8 @@ section > .container1 {
 .tel,
 .email,
 .address,
-.website {
+.website,
+.logo {
   list-style: none;
   margin-left: -40px;
 }
@@ -180,6 +188,23 @@ section > .container1 {
   color: rgb(87, 143, 255);
 }
 
+/* Báo lỗi email  */
+#error-email {
+  color: red;
+  font-weight: 700;
+}
+.submit-email {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.submitEmail {
+  width: 150px;
+}
+/* view more none */
+.view-more,
+.less {
+  display: none;
+}
 .music,
 .game,
 .trip,
@@ -190,14 +215,13 @@ section > .container1 {
 span {
   font-weight: bolder;
 }
-section > .container2 {
-  margin: 30px auto;
+section .container2 {
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 20px 200px;
   /* width: 30%; */
   gap: 30px;
-  justify-self: center;
   z-index: -1;
 }
 
@@ -212,6 +236,15 @@ section > .container2 {
   border: 1px solid rgba(0, 0, 0, 0.6);
   padding: 30px 30px;
   border-radius: 15px;
+}
+/* Display: none  */
+.experiment .section-content,
+.education .section-content,
+.action .section-content,
+.hobby .section-content,
+.language .section-content,
+.skill .section-content {
+  display: none;
 }
 .experiment-title,
 .education-title,
@@ -235,7 +268,7 @@ section > .container2 {
 .exp-content li::before {
   position: absolute;
   top: 5px;
-  left: 25px;
+  left: 15px;
   content: "";
   display: inline-block;
   width: 10px;
@@ -319,7 +352,7 @@ section > .container2 {
 /* Chỉnh bố cục một số phần thân bài  */
 section > .container3 {
   margin: auto;
-  display: block;
+  display: grid;
   background-color: #f7f7f7;
   padding: 20px 200px;
 }
@@ -340,11 +373,8 @@ section > .container5 {
 
 .section-title {
   margin-bottom: 30px;
+  margin-left: 30px;
 }
-
-/* .fullstack {
-  opacity: 0.5;
-} */
 
 /* Giải thưởng  */
 .certificate-items {
@@ -363,8 +393,8 @@ section > .container5 {
 /* Chia bố cục giải thưởng thành grid 3x3 */
 .certificate-content {
   display: grid;
-  grid-template-columns: 1fr 2px 1fr;
-  grid-template-rows: 1fr 2px 1fr;
+  grid-template-columns: 1fr 1px 1fr;
+  /* grid-template-rows: 1fr 2px 1fr; */
 }
 .certificate-title {
   text-transform: uppercase;
@@ -446,11 +476,11 @@ section > .container5 {
 }
 .time-details {
   height: 20px;
-  padding: 5px 15px;
+  padding: 3px 15px;
   background-color: rgb(87, 143, 255);
   color: white;
-  border-radius: 15px;
-  justify-self: center;
+  border-radius: 8px;
+  /* justify-self: center; */
   /* margin: auto; */
 }
 .unit {
