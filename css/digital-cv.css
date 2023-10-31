@@ -1,19 +1,13 @@
 body {
   margin: auto;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  padding: auto;
 }
 .goals,
 .team,
 .timeline,
 .scopes,
 .primary {
-  margin: 1rem;
-  margin-left: 10px;
+  border-radius: 5px;
 }
 p {
   margin: 5px;
@@ -27,25 +21,10 @@ p {
   align-items: center;
   justify-content: center;
 }
-.goals {
-  grid-column: 1 / span 2;
-  grid-row: 1;
-}
-.scopes {
-  grid-column: 1 / span 2;
-  grid-row: 2;
-}
-.scope-content {
-  display: flex;
-}
-.timeline {
-  grid-column: 4;
-  grid-row: 1 / span 2;
-}
-
-.flex-ctn {
-  display: flex;
-  /* gap: 5px; */
+.col1,
+.col2,
+.col3 {
+  height: 100%;
 }
 .block-ctn {
   display: block;
@@ -59,9 +38,6 @@ p {
 }
 .goal {
   font-weight: bolder;
-}
-.p {
-  margin: 10px;
 }
 .flag {
   margin: 30px;
