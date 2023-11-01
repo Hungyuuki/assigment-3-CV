@@ -21,11 +21,7 @@ p {
   align-items: center;
   justify-content: center;
 }
-.col1,
-.col2,
-.col3 {
-  height: 100%;
-}
+
 .block-ctn {
   display: block;
 }
@@ -45,4 +41,21 @@ p {
 .hr-item {
   height: 1px;
   border: 1px dashed aqua;
+}
+/* 
+.col1,
+.col2,
+.col3 {
+  height: 100%;
+} */
+@media (width <960px) {
+  .horial {
+    display: none;
+  }
+  .flag {
+    justify-content: center;
+  }
+}
+.horial {
+  height: 20px;
 }
