@@ -1,4 +1,7 @@
 @media screen and (max-width: 820px) {
+  body {
+    margin: 30px;
+  }
   #banner {
     padding: 5px;
   }
@@ -38,14 +41,17 @@
     display: none;
   }
   .project-items {
-    margin-bottom: 40px;
+    .project-items {
+      display: block;
+      margin: 0 auto;
+    }
   }
   section > .container4 {
     display: block;
     padding: 50px 0 50px 0 !important;
   }
   section > .container5 {
-    width: 50%;
+    /* width: 50%; */
     display: grid;
     gap: 30px;
   }
@@ -57,5 +63,8 @@
   }
   .name-user {
     display: none;
+  }
+  .space {
+    margin: 30px;
   }
 }

@@ -55,7 +55,18 @@ p {
   .flag {
     justify-content: center;
   }
+  .col1,
+  .col2,
+  .col3 {
+    display: block;
+  }
+  .horial {
+    display: block;
+    height: 20px;
+    background-color: #007bff;
+  }
 }
 .horial {
+  display: block;
   height: 20px;
 }

@@ -8,6 +8,10 @@
     font-size: smaller;
     text-shadow: 0.1em 0.1em #222;
   }
+  .section-title {
+    align-items: center;
+    margin-left: 0px;
+  }
   section .container {
     display: block;
     margin: 10px;
@@ -46,7 +50,8 @@
     display: block;
   }
   .project-items {
-    margin-bottom: 40px;
+    display: block;
+    margin: 0 auto;
   }
   section > .container4 {
     display: block;
@@ -64,5 +69,8 @@
   }
   .name-user {
     display: none;
+  }
+  .space {
+    margin: 30px;
   }
 }
